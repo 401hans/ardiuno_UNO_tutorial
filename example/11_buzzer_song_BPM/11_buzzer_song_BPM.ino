@@ -2,7 +2,7 @@
 
 int buzzerPin = 9;        // 定義蜂鳴器引腳
 int size;
-float BPM = 120.0;                // Beats Per minute
+float BPM = 150.0;                // Beats Per minute
 int quarter = (60/BPM)*1000;      // 四分音符
 int half = quarter * 2;           // 半分音符
 int eigth = quarter / 2;          // 八分音符
@@ -32,13 +32,13 @@ int melody[] = {NOTE_C4, NOTE_C4, NOTE_G4, NOTE_G4,
 
 // 用陣列儲存兩隻老虎的節奏
 int noteDurations[] = { quarter, quarter, quarter, quarter,
-                        quarter, quarter, quarter,
+                        quarter, quarter, half,
                         quarter, quarter,quarter ,quarter,
-                        quarter, quarter,quarter,
+                        quarter, quarter, half,
                         quarter, quarter, quarter, quarter,                        
-                        quarter,quarter,quarter,
-                        eigth, quarter, quarter,quarter,
-                        quarter, quarter, quarter,
+                        quarter,quarter,  half,
+                        quarter, quarter, quarter,quarter,
+                        quarter, quarter, half,
                 };
 
 void setup() {
