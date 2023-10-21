@@ -22,9 +22,9 @@ void set_beats(float BPM, int beats[]) {
 // 用陣列儲存兩隻老虎的旋律
 int melody[] = {NOTE_C4, NOTE_C4, NOTE_G4, NOTE_G4,
                 NOTE_A4, NOTE_A4, NOTE_G4, 
-                NOTE_F4, NOTE_F4, NOTE_E4,NOTE_E4,
+                NOTE_F4, NOTE_F4, NOTE_E4, NOTE_E4,
                 NOTE_D4, NOTE_D4, NOTE_C4,
-                NOTE_G4, NOTE_F4, NOTE_F4, NOTE_F4,
+                NOTE_G4, NOTE_G4, NOTE_F4, NOTE_F4,
                 NOTE_E4, NOTE_E4, NOTE_D4, 
                 NOTE_G4, NOTE_G4, NOTE_F4,NOTE_F4,
                 NOTE_E4, NOTE_E4, NOTE_D4
