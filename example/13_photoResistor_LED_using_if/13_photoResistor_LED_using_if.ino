@@ -14,7 +14,7 @@ void loop() {
   Serial.print("Analog signal: ");
   Serial.println(value);
   
-  if(value <= 17) {          // 判斷 value 是否小於等於 10
+  if (value <= 17) {          // 判斷 value 是否小於等於 10
     Serial.println("It is dark.");
     digitalWrite(LEDpin, HIGH);     // 數位訊號給高電壓 讓 LED 亮
   } else {                          // 其他狀況
