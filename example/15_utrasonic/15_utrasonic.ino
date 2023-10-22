@@ -1,4 +1,4 @@
-int receiver = 5; // 接收回傳的聲波
+ int receiver= 5; // 接收回傳的聲波
 int trigger = 4;  // 發射聲波
 float distance;   // 紀錄距離用
 float t;          // 紀錄時間長度用
@@ -14,7 +14,7 @@ float compute_distance(float time) {
     約略等於 distance = time / 58.0
   */
   float distance;
-  distance = time / 58.0;
+  distance  = time / 58.0;
   return distance;
 }
 
@@ -22,9 +22,18 @@ void setup() {
   Serial.begin(9600);
   pinMode(receiver, INPUT);
   pinMode(trigger, OUTPUT);
+  pinMode(3, OUTPUT);
+  
 }
 
 void loop() {
+  if (distance <= 25) {
+  digitalWrite(3,HIGH);
+  delay(1000);
+  } else {
+  digitalWrite(3, LOW);
+  delay(1000);
+  }
   digitalWrite(trigger,LOW);
   delayMicroseconds(5);
 
@@ -35,6 +44,7 @@ void loop() {
   t = pulseIn(receiver,HIGH);     // 讀取接收超音波脈衝時間 (微秒)
   distance = compute_distance(t); // 使用函式計算長度
   
-  Serial.println(x);
+  Serial.print("distance: ");
+  Serial.println(distance);
   delay(250);
 }
