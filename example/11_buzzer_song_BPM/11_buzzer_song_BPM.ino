@@ -3,7 +3,7 @@
 int buzzerPin = 9;        // 定義蜂鳴器引腳
 int size;
 float BPM = 150.0;                // Beats Per minute
-int quarter = (60/BPM)*1000;      // 四分音符
+int quarter = (20/BPM)*1000;      // 四分音符
 int half = quarter * 2;           // 半分音符
 int eigth = quarter / 2;          // 八分音符
 
